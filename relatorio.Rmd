@@ -70,6 +70,7 @@ df = df |>
 
 ```
 
+alteração teste 
 
 ```{r bar1, fig.cap="Gráfico de barras relativo aos Cursos do CCNE"}
 df |> 
