@@ -1,6 +1,10 @@
 ---
 title: "title"
-author: "author"
+author:
+  - Alisson Rosa Pereira^[@gmail.com]
+  - Caroline Cogo Carneosso^[carolcogo808@gmail.com]
+  - Renata Figueiredo Stone^[renastan@gmail.com]
+  - Vitor Bernardo Silveira Pereira^[@gmail.com]
 abstract: "abstract"
 header-includes:
    - \usepackage[brazil]{babel}
@@ -11,7 +15,6 @@ output:
 editor_options:
   chunk_output_type: console
 indent: true
-
 ---
 
 
@@ -68,7 +71,7 @@ df = df |>
 ```
 
 
-```{r}
+```{r bar1, fig.cap="Gráfico de barras relativo aos Cursos do CCNE"}
 df |> 
   count(`Curso:`) |> 
   ggplot(aes(`Curso:`,n)) +
@@ -76,6 +79,7 @@ df |>
   coord_flip()
 ```
 
+A partir da figura \@ref(fig:bar1) podemos observar que obtivemos respostas de todos os cursos do CCNE, 
 ```{r}
 df |> 
  to_pt( `Semestre:`) |> 
