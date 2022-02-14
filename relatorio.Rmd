@@ -130,6 +130,7 @@ df |>
  
 Por meio da Tabela \@ref(tab:tab6), observa-se que cerca de 58% são estudantes e 42% são estudantes/empregados, para ambos destaca-se o Moodle como plataforma de estudo mais utilizada com cerca de 47% das respostas. Para os estudantes as plataformas mais utilizada após o Moodle é Ferramentas para a elaboração de trabalhos e o Google Meet, com 20% e 18%, respectivamente. Para os estudantes/empregados seguem Youtube com cerca de 19% das respostas e Google Meet com aproximadamente 15%.
 
+
 ```{r tab6}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Qual plataforma de estudo você tende a utilizar mais?`,`Ocupação:`)
