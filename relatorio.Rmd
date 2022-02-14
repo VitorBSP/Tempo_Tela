@@ -18,7 +18,6 @@ indent: true
 ---
 
 
-
 ```{r setup,include=F}
 
 options(digits=3)  #Arrendodamento
@@ -58,8 +57,24 @@ to_pt = function(df,v){
     mypdf1::pdf1_tbl_freq({{v}}) |> 
     rename(`n` =  absolute_frequency, `%` = relative_frequency)
 }
+
+
 ```
 
+
+
+\section{Intr}
+\section{Intro}
+\section{Introd}
+\section{Introdu}
+
+
+\newpage
+\section{Resultados e discussões}
+
+Para analisar o tempo de tela dos alunos de graduação do Centro de Ciências Naturais e Exatas (CCNE), acerca das diversas plataformas que têm acesso e o gerenciamento entre elas foi aplicado um questionário para os alunos dos 17 cursos de graduação do CCNE. Ao final do período da coleta dos dados, obteve-se 123 respostas do questionário, o que corresponde a, aproximadamente, 6% do público-alvo.
+
+Dentre os estudantes que participaram da pesquisa, aproximadamente, 46% do gênero feminino e 54% do gênero masculino. A maior porcentagem de respostas é dos estudantes do segundo, sexto e oitavo semestre com 21,1%, como pode ser visto na Tabela \@ref(tab:tab1). 
 
 
 ```{r }
@@ -68,9 +83,12 @@ df = df |>
   select(-`Endereço de e-mail`,-`Carimbo de data/hora`,-Pontuação,
          -`Você gostaria de deixar algum comentário sobre o assunto abordado nessa pesquisa?`)
 
+df = df |> 
+  mutate(`Qual desses dispositivos você mais utiliza ?` = as.factor(`Qual desses dispositivos você mais utiliza ?`),
+         `Qual desses dispositivos você mais utiliza ?`= fct_recode(`Qual desses dispositivos você mais utiliza ?`,'Computador/Notebook' = 'Computador'))
+
 ```
 
-alteração teste 
 
 ```{r bar1, fig.cap="Gráfico de barras relativo aos Cursos do CCNE"}
 df |> 
@@ -80,108 +98,118 @@ df |>
   coord_flip()
 ```
 
-A partir da figura \@ref(fig:bar1) podemos observar que obtivemos respostas de todos os cursos do CCNE, 
-```{r}
+A partir da Figura \@ref(fig:bar1) pode-se observar que foi obtido respostas de todos os cursos do CCNE, destacando-se o curso de Estatística, com mais respostas, e na sequência os cursos de Química Industrial, Química Bacharelado, Física Bacharelado e Ciências Biológicas Núcleo Comum.  
+
+```{r tab1}
 df |> 
  to_pt( `Semestre:`) |> 
   mypdf1::pdf1_tbl('Proporção por curso')
 ```
 
-```{r}
+Agora, considerando os aplicativos ou ferrementas para administração do tempo em tela, na Tabela \@ref(tab:tab2), nota-se que 75% dos estudantes não faz uso dessa alternativa, enquanto que 24% já utiliza. Ao fim do estudo, essa pode ser uma possibilidade de melhora, para os estudantes que se apresentarem incomodados com o aumento de tempo de tela.
+
+```{r tab2}
 df |> 
  to_pt( `Você utiliza algum aplicativo ou ferramenta que controla o tempo de uso de plataformas?`) |> 
   mypdf1::pdf1_tbl('Proporção de utilização de aplicativos para controlar tempo')
 ```
 
+Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam utilizar mais o celular, enquanto que os homens optam pelo computador. 
 
-
-```{r }
+```{r tab3}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Sexo:`, `Qual desses dispositivos você mais utiliza ?`)
 ```
 
-```{r}
+Através da Tabela \@ref(tab:tab5), verifica-se que cerca de 47% dos estudantes utilizam o celular como dispositivo para plataformas de estudos, já os outros 57% utilizam o computador. A plataforma de estudo mais utilizada entre os estudantes é o Moodle, com 58 respostas, destes 55% utilizam o Moodle no computador e 45% no celular. Entre as plataformas mais utilizadas seguem Google Meet com 17% e Ferramentas para a elaboração de trabalhos com cerca de 16%. 
 
+```{r tab5}
 df |> 
-  mypdf1::pdf1_tbl_freq2(`Sexo:`, `Curso:`)
+  mypdf1::pdf1_tbl_freq2(`Qual plataforma de estudo você tende a utilizar mais?`,`Qual desses dispositivos você mais utiliza ?`)
+```
+ 
+Por meio da Tabela \@ref(tab:tab6), observa-se que cerca de 58% são estudantes e 42% são estudantes/empregados, para ambos destaca-se o Moodle como plataforma de estudo mais utilizada com cerca de 47% das respostas. Para os estudantes as plataformas mais utilizada após o Moodle é Ferramentas para a elaboração de trabalhos e o Google Meet, com 20% e 18%, respectivamente. Para os estudantes/empregados seguem Youtube com cerca de 19% das respostas e Google Meet com aproximadamente 15%.
+
+```{r tab6}
+df |> 
+  mypdf1::pdf1_tbl_freq2(`Qual plataforma de estudo você tende a utilizar mais?`,`Ocupação:`)
 ```
 
+De acordo com a Tabela \@ref(tab:tab7) destaca-se O Instagram como rede social mais utilizada com 50% das respostas, principalmente entre a faixa etária de 20-25 anos com 73% das respostas. Entre as plataformas de redes socias seguem Twitter e Facebook, com 14% e 11%.
 
-
-```{r }
+```{r tab7}
 df |> 
-  mypdf1::pdf1_tbl_freq2(`Qual desses dispositivos você mais utiliza ?`, `Qual plataforma de estudo você tende a utilizar mais?`)
+  mypdf1::pdf1_tbl_freq2(`Idade:`, `Qual plataforma de rede social você tende a utilizar mais?`)
 ```
 
+Na Tabela \@ref(tab:tab8) percebe-se que o dispositivo computador é o mais utilizado entre os estudantes com aproximadamente 56% das respostas, para os estudantes/empregados é o celular com 52%.
 
-```{r}
-df |> 
-  mypdf1::pdf1_tbl_freq2(`Ocupação:`, `Qual plataforma de estudo você tende a utilizar mais?`)
-```
-
-
-```{r}
-df |> 
-  mypdf1::pdf1_tbl_freq2(`Ocupação:`, `Qual plataforma de rede social você tende a utilizar mais?`)
-```
-
-
-```{r}
+```{r tab8}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Ocupação:`, `Qual desses dispositivos você mais utiliza ?`)
 ```
 
-```{r }
+Com base na Tabela \@ref(tab:tab9) e \@ref(tab:tab9) nota-se que para o **sexo feminino** antes da pandemia da Covid-19, o tempo médio diário em frente a tela para a maioria das estudantes, cerca de 48% era de 2h-4h. Já para a fase atual da pandemia, o tempo médio diário para o sexo feminino, aproximadamente 25%, passou para 8h-10h, seguidos por 6h-8h e 10h-12h ambos com 20% das estudantes.
+
+Já para o **sexo masculino** o tempo médio diário em frente a tela, anterior a pandemia era de 4h-6h para cerca de 35% dos estudantes, o tempo médio diário atual é também de 8h-10h com 32% dos estudantes, prosseguido por 6h-8h e mais que 12h, ambos com 18% das respostas.
+
+```{r tab9}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Sexo:`, `Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?`)
+
 ```
+```{r tab10}
+df |> 
+  mypdf1::pdf1_tbl_freq2(`Sexo:`, `Atualmente, em média quanto tempo diário você fica em frente a tela?`)
 
+```
+ 
+Segundo a Tabela \@ref(tab:tab11) certifica-se que cerca de 85% do sexo feminino não utiliza plataformas de video games e aproximadamente 46% para o sexo masculino. Além disso, 33% dos estudantes do sexo masculino utilizam o computador para utilizar video games.
 
-```{r }
+```{r tab11}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Sexo:`, `Qual plataforma de Video Games você tende a utilizar mais ?`)
-
-
 ```
 
-```{r}
+  
+```{r tab12}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?`,
                          `Atualmente, em média quanto tempo diário você fica em frente a tela?`)
 ```
 
-
-```{r}
+```{r bar2, fig.cap="Gráfico de barras em relação aos dias da semana que mais se utiliza o dispositivo"}
 df |> 
   separate_rows(`Referente a questão anterior qual(is) é o dia que você mais utiliza o dispositivo?`, sep = ', ') |>   bar_plot(`Referente a questão anterior qual(is) é o dia que você mais utiliza o dispositivo?`)+ 
   theme(legend.position = 'none')
-
-
-
-  
-
 ```
 
+Referente a Figura \@ref(fig:bar2), pode-se concluir que não há uma diferença significativa entre os dias uteis da semana (segunda, terça, quarta, quinta, sexta) que mais se utiliza o dispositivo, todos com cerca de 16%. Entretanto, é possível notar essa diferença em relação ao fim de semana, sábado e domingo, com cerca de 11% e 10%, respectivamente. Ambos com uma percentagem relativamente menor quando comparado aos dias uteis.
 
-```{r}
+```{r bar3}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de redes sociais:`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de redes sociais:`)+ 
   theme(legend.position = 'none')
 ```
 
-```{r}
+Figura \@ref(fig:bar3)
+
+```{r bar4}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de streaming :`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de streaming :`)+ 
   theme(legend.position = 'none')
 ```
 
-```{r}
+Figura \@ref(fig:bar4)
+
+```{r bar5}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de estudo :`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de estudo :`)+ 
   theme(legend.position = 'none')
 ```
 
-# Bibliography {-}
+Figura \@ref(fig:bar5)
+
 
 
 
