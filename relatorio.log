@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  14 FEB 2022 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.14)  14 FEB 2022 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-05> (c:/Users/user/AppData/Roaming/TinyTeX/texmf-
 dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -571,7 +571,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \c@nlinenum=\count310
 \TeXr@lab=\toks34
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 86
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 87
 .
 (c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
@@ -584,24 +584,24 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 ) (./relatorio.aux)
 \openout1 = `relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 (c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstop
 df-base.sty
@@ -614,7 +614,7 @@ f-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 87.
 
 (c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.st
 y
@@ -630,9 +630,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 (./relatorio.out) (./relatorio.out)
 \@outlinefile=\write3
 \openout3 = `relatorio.out'.
@@ -656,12 +656,12 @@ LaTeX Info: Redefining \nameref on input line 86.
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -693,11 +693,11 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 7.
+(Font)              <12> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 7.
+(Font)              <8> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 7.
+(Font)              <6> on input line 7.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 (c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -717,287 +717,305 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: relatorio_files/figure-latex/bar1-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar1-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar1-1.pdf  used on input
- line 108.
+ line 114.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
 [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.149 
-       <./relatorio_files/figure-latex/bar1-1.pdf>] [3pdfTeX warning (ext4): de
-stination with the same identifier (name{table.1}) has been already used, dupli
-cate ignored
+l.155 
+       <./relatorio_files/figure-latex/bar1-1.pdf>]
+Overfull \hbox (41.03302pt too wide) in paragraph at lines 162--173
+ [][] 
+ []
+
+<relatorio_files/figure-latex/bar2-1.pdf, id=74, 563.10374pt x 274.02374pt>
+File: relatorio_files/figure-latex/bar2-1.pdf Graphic file (type pdf)
+<use relatorio_files/figure-latex/bar2-1.pdf>
+Package pdftex.def Info: relatorio_files/figure-latex/bar2-1.pdf  used on input
+ line 177.
+(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
+[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.218 
+l.183 
       pdfTeX warning (ext4): destination with the same identifier (name{table.2
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.218 
+l.183 
+      ]
+<relatorio_files/figure-latex/bar3-1.pdf, id=81, 563.10374pt x 274.02374pt>
+File: relatorio_files/figure-latex/bar3-1.pdf Graphic file (type pdf)
+<use relatorio_files/figure-latex/bar3-1.pdf>
+Package pdftex.def Info: relatorio_files/figure-latex/bar3-1.pdf  used on input
+ line 188.
+(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.194 
+       <./relatorio_files/figure-latex/bar2-1.pdf>]
+<relatorio_files/figure-latex/bar4-1.pdf, id=93, 563.10374pt x 274.02374pt>
+File: relatorio_files/figure-latex/bar4-1.pdf Graphic file (type pdf)
+<use relatorio_files/figure-latex/bar4-1.pdf>
+Package pdftex.def Info: relatorio_files/figure-latex/bar4-1.pdf  used on input
+ line 199.
+(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.205 
+       <./relatorio_files/figure-latex/bar3-1.pdf>]
+<relatorio_files/figure-latex/bar5-1.pdf, id=105, 563.10374pt x 274.02374pt>
+File: relatorio_files/figure-latex/bar5-1.pdf Graphic file (type pdf)
+<use relatorio_files/figure-latex/bar5-1.pdf>
+Package pdftex.def Info: relatorio_files/figure-latex/bar5-1.pdf  used on input
+ line 210.
+(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.216 
+       <./relatorio_files/figure-latex/bar4-1.pdf>] [7pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.5}) has been already used, dupl
+icate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.244 
       pdfTeX warning (ext4): destination with the same identifier (name{table.3
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.218 
-      ] [4pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.4}) has been already used, duplicate ignored
+l.244 
+       <./relatorio_files/figure-latex/bar5-1.pdf>] [8pdfTeX warning (ext4): de
+stination with the same identifier (name{table.4}) has been already used, dupli
+cate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.301 
+l.309 
       pdfTeX warning (ext4): destination with the same identifier (name{table.5
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.301 
+l.309 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.301 
-      ] [5pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.7}) has been already used, duplicate ignored
+l.309 
+      ]
+Overfull \hbox (26.08945pt too wide) in paragraph at lines 314--335
+ [][] 
+ []
+
+
+Overfull \hbox (0.51384pt too wide) in paragraph at lines 346--367
+ [][] 
+ []
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.7}) h
+as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 \end{table}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.8}) has been already used, duplicate ignored
+l.389 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.8
+}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 \end{table}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.9}) has been already used, duplicate ignored
+l.389 
+      ] [10pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 \end{table}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.10}) has been already used, duplicate ignored
+l.451 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.1
+0}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 \end{table}
-                 ]
-<relatorio_files/figure-latex/bar2-1.pdf, id=103, 563.10374pt x 274.02374pt>
-File: relatorio_files/figure-latex/bar2-1.pdf Graphic file (type pdf)
-<use relatorio_files/figure-latex/bar2-1.pdf>
-Package pdftex.def Info: relatorio_files/figure-latex/bar2-1.pdf  used on input
- line 387.
-(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-<relatorio_files/figure-latex/bar3-1.pdf, id=105, 563.10374pt x 274.02374pt>
-File: relatorio_files/figure-latex/bar3-1.pdf Graphic file (type pdf)
-<use relatorio_files/figure-latex/bar3-1.pdf>
-Package pdftex.def Info: relatorio_files/figure-latex/bar3-1.pdf  used on input
- line 398.
-(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[6pdfTeX warning (ext4): destination with the same identifier (name{table.11}) 
-has been already used, duplicate ignored
+l.451 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.1
+1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.404 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.404 
-       <./relatorio_files/figure-latex/bar2-1.pdf>]
-<relatorio_files/figure-latex/bar4-1.pdf, id=117, 563.10374pt x 274.02374pt>
-File: relatorio_files/figure-latex/bar4-1.pdf Graphic file (type pdf)
-<use relatorio_files/figure-latex/bar4-1.pdf>
-Package pdftex.def Info: relatorio_files/figure-latex/bar4-1.pdf  used on input
- line 409.
-(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.417 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.417 
-       <./relatorio_files/figure-latex/bar3-1.pdf> <./relatorio_files/figure-la
-tex/bar4-1.pdf>]
-<relatorio_files/figure-latex/bar5-1.pdf, id=137, 563.10374pt x 274.02374pt>
-File: relatorio_files/figure-latex/bar5-1.pdf Graphic file (type pdf)
-<use relatorio_files/figure-latex/bar5-1.pdf>
-Package pdftex.def Info: relatorio_files/figure-latex/bar5-1.pdf  used on input
- line 420.
-(pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-<relatorio_files/figure-latex/bar7-1.pdf, id=139, 563.10374pt x 274.02374pt>
+l.451 
+      ]
+<relatorio_files/figure-latex/bar7-1.pdf, id=168, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar7-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar7-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar7-1.pdf  used on input
- line 433.
+ line 454.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.439 
-       <./relatorio_files/figure-latex/bar5-1.pdf>]
-<relatorio_files/figure-latex/bar8-1.pdf, id=151, 563.10374pt x 274.02374pt>
+<relatorio_files/figure-latex/bar8-1.pdf, id=170, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar8-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar8-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar8-1.pdf  used on input
- line 444.
+ line 465.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
-has been already used, duplicate ignored
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.452 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.452 
-       <./relatorio_files/figure-latex/bar7-1.pdf> <./relatorio_files/figure-la
-tex/bar8-1.pdf>]
-<relatorio_files/figure-latex/bar9-1.pdf, id=173, 563.10374pt x 274.02374pt>
+l.471 
+       <./relatorio_files/figure-latex/bar7-1.pdf>]
+<relatorio_files/figure-latex/bar9-1.pdf, id=187, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar9-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar9-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar9-1.pdf  used on input
- line 457.
+ line 478.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-<relatorio_files/figure-latex/bar12-1.pdf, id=175, 563.10374pt x 274.02374pt>
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.484 
+       <./relatorio_files/figure-latex/bar8-1.pdf>]
+<relatorio_files/figure-latex/bar12-1.pdf, id=203, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar12-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar12-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar12-1.pdf  used on inpu
-t line 468.
+t line 489.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.474 
+l.495 
        <./relatorio_files/figure-latex/bar9-1.pdf>]
-<relatorio_files/figure-latex/bar13-1.pdf, id=190, 563.10374pt x 274.02374pt>
+<relatorio_files/figure-latex/bar13-1.pdf, id=215, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar13-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar13-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar13-1.pdf  used on inpu
-t line 479.
+t line 500.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.485 
+l.506 
        <./relatorio_files/figure-latex/bar12-1.pdf>]
-<relatorio_files/figure-latex/bar14-1.pdf, id=201, 563.10374pt x 274.02374pt>
+<relatorio_files/figure-latex/bar14-1.pdf, id=226, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/bar14-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/bar14-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/bar14-1.pdf  used on inpu
-t line 490.
+t line 511.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.498 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-11}) has been already used, duplicate ignored
+l.517 
+       <./relatorio_files/figure-latex/bar13-1.pdf>] [16pdfTeX warning (ext4): 
+destination with the same identifier (name{figure.11}) has been already used, d
+uplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.498 
-       <./relatorio_files/figure-latex/bar13-1.pdf> <./relatorio_files/figure-l
-atex/bar14-1.pdf>] [13pdfTeX warning (ext4): destination with the same identifi
-er (name{table.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.610 
+l.569 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
-3}) has been already used, duplicate ignored
+2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.610 
+l.569 
+       <./relatorio_files/figure-latex/bar14-1.pdf>] [17pdfTeX warning (ext4): 
+destination with the same identifier (name{table.13}) has been already used, du
+plicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.631 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.610 
-      ] [14pdfTeX warning (ext4): destination with the same identifier (name{ta
+l.631 
+      ] [18pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.701 
+l.693 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.701 
+l.693 
+      ] [19pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.753 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
-7}) has been already used, duplicate ignored
+8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.701 
-      ] [15pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.18}) has been already used, duplicate ignored
+l.753 
+      ] [20pdfTeX warning (ext4): destination with the same identifier (name{ta
+ble.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.747 ...ção é igual a matriz de identidade} \]
-                                                   versus a hipótese altern...
-pdfTeX warning (ext4): destination with the same identifier (name{table.19}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.747 ...ção é igual a matriz de identidade} \]
-                                                   versus a hipótese altern...
-]
-Overfull \hbox (6.46931pt too wide) in paragraph at lines 757--774
+l.768 ...o não é igual a matriz de identidade}\]
+                                                  ]
+Overfull \hbox (7.01501pt too wide) in paragraph at lines 778--795
  [][] 
  []
 
-<relatorio_files/figure-latex/gcor-1.pdf, id=252, 563.10374pt x 274.02374pt>
+<relatorio_files/figure-latex/gcor-1.pdf, id=290, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/gcor-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/gcor-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/gcor-1.pdf  used on input
- line 784.
+ line 805.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[16pdfTeX warning (ext4): destination with the same identifier (name{table.20})
+[21pdfTeX warning (ext4): destination with the same identifier (name{table.20})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.790 
+l.811 
       ]
 
-LaTeX Warning: Reference `fig:cp1' on page 17 undefined on input line 798.
+LaTeX Warning: Reference `fig:cp1' on page 22 undefined on input line 819.
 
-<relatorio_files/figure-latex/cp1-1.pdf, id=266, 563.10374pt x 274.02374pt>
+<relatorio_files/figure-latex/cp1-1.pdf, id=299, 563.10374pt x 274.02374pt>
 File: relatorio_files/figure-latex/cp1-1.pdf Graphic file (type pdf)
 <use relatorio_files/figure-latex/cp1-1.pdf>
 Package pdftex.def Info: relatorio_files/figure-latex/cp1-1.pdf  used on input 
-line 800.
+line 821.
 (pdftex.def)             Requested size: 517.58916pt x 251.87492pt.
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.12}
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.12}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.800 ...io_files/figure-latex/cp1-1} \end{center}
+l.821 ...io_files/figure-latex/cp1-1} \end{center}
                                                    <./relatorio_files/figure-la
 tex/gcor-1.pdf>]
 
-LaTeX Warning: Reference `fig:cp1' on page 18 undefined on input line 802.
+LaTeX Warning: Reference `fig:cp1' on page 23 undefined on input line 823.
 
 
-LaTeX Warning: Reference `fig:cp1' on page 18 undefined on input line 821.
+LaTeX Warning: Reference `fig:cp1' on page 23 undefined on input line 842.
 
-[18pdfTeX warning (ext4): destination with the same identifier (name{table.21})
+[23pdfTeX warning (ext4): destination with the same identifier (name{table.21})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.847 
+l.866 
+       <./relatorio_files/figure-latex/cp1-1.pdf>]
+Overfull \hbox (83.16602pt too wide) in paragraph at lines 875--896
+ [][] 
+ []
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{table.22})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.901 
       pdfTeX warning (ext4): destination with the same identifier (name{table.2
-2}) has been already used, duplicate ignored
+3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.847 
-       <./relatorio_files/figure-latex/cp1-1.pdf>] [19pdfTeX warning (ext4): de
-stination with the same identifier (name{table.23}) has been already used, dupl
-icate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.890 \end{document}
-                    ] (./relatorio.aux)
+l.901 
+      ] [25] (./relatorio.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1005,26 +1023,26 @@ Package rerunfilecheck Info: File `relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 64900A4B3B3BEC0F9E26A2A2FBDB1B1B;1097.
  ) 
 Here is how much of TeX's memory you used:
- 13949 strings out of 480238
- 224200 string characters out of 5894353
- 550022 words of memory out of 5000000
- 31550 multiletter control sequences out of 15000+600000
- 513423 words of font info for 67 fonts, out of 8000000 for 9000
+ 13973 strings out of 480238
+ 224890 string characters out of 5894353
+ 542295 words of memory out of 5000000
+ 31558 multiletter control sequences out of 15000+600000
+ 513748 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,9n,63p,1379b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.en
 c}{c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathi
 t.enc}{c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r
 .enc}<c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
-mi10.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
-m/lmr10.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publi
-c/lm/lmr7.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw
+mi12.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/l
+m/lmr12.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr8.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb><c:/Users/user/AppData/Roaming/TinyTeX/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvr8a.pfb>
-Output written on relatorio.pdf (19 pages, 169092 bytes).
+Output written on relatorio.pdf (25 pages, 169904 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
