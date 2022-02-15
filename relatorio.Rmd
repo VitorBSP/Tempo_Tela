@@ -210,7 +210,7 @@ df |>
   theme(legend.position = 'none')
 ```
 
-Referente a Figura \@ref(fig:bar2), pode-se concluir que não há uma diferença sugestiva entre os dias uteis da semana (segunda, terça, quarta, quinta, sexta) que mais se utiliza o dispositivo, todos os dias estão com cerca de 16%. Entretanto, é possível notar essa diferença em relação ao fim de semana, sábado e domingo, com cerca de 11% e 10%, respectivamente. Ambos com uma percentagem relativamente menor quando comparado aos dias uteis.
+Referente a Figura \@ref(fig:bar2), pode-se concluir que não há uma diferença expressiva entre os dias úteis da semana (segunda, terça, quarta, quinta, sexta) que mais se utiliza o dispositivo, todos os dias estão com cerca de 16%. Entretanto, é possível notar essa diferença em relação ao fim de semana, sábado e domingo, com cerca de 11% e 10%, respectivamente. Ambos com uma percentagem relativamente menor quando comparado aos dias úteis.
 
 ```{r bar3, fig.cap="Gráfico de barras relativo aos dias da semana que mais se utiliza plataformas de redes sociais"}
 df |> 
