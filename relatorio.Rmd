@@ -270,7 +270,7 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
   theme(legend.position = 'none')
 ```
 
-Na Figura \@ref(fig:bar12), nota-se que não há diferenças expressivas entre as alternativas: **Pior, Indiferente, e Melhor**, com 27%, 29% e 23% das respostas, respectivamente, esses porcentagens dizem respeito quando questionado  a influencia do tempo de tela em relação a cooperação dos estudantes no trabalhos em equipe. 
+Na Figura \@ref(fig:bar12), nota-se que não há diferenças consideráveis entre as alternativas: **Pior**, **Indiferente**, e **Melhor**, com 27%, 29% e 23% das respostas, respectivamente, essas porcentagens dizem respeito quando questionado  a influencia do tempo de tela em relação a cooperação dos estudantes no trabalhos em equipe. 
 
 
 ```{r bar13, fig.cap="Gráfico de barras em relação a noção sobre a influencia do aumento de tempo de tela no rendimento pessoal"}
