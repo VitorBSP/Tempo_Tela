@@ -139,7 +139,7 @@ df |>
   mypdf1::pdf1_tbl('Proporção de utilização de aplicativos para controlar tempo')
 ```
 
-Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam utilizar mais o celular, enquanto que os homens optam pelo computador. Outras opção de resposta para essa questão, como, tablet, televisão e video game não obtiveram nenhuma resposta.
+Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam que utilizam mais o celular, enquanto que os homens optam pelo computador. Outras opção de resposta para essa questão, como, tablet, televisão e video game não obtiveram nenhuma resposta.
 
 ```{r tab3}
 df |> 
