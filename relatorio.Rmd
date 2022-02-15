@@ -26,7 +26,6 @@ options(digits=3)  #Arrendodamento
 options(scipen=999)
 ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
 knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=3.8)
-scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 #devtools::install_github('https://github.com/AlissonRP/mypdf1/tree/templates')
 
 
@@ -87,24 +86,56 @@ tab=function(df,v1,v2){
 
 ```
 
+```{r}
+#\section{Introdução}
+#\section{Intro}
+#\section{Introdu}
+#\section{Introduço}
 
-\section{Introdução}
-\section{Intro}
-\section{Introdu}
-\section{Introduço}
+#\newpage
 
-\newpage
+#a
+
+#\newpage
+#b
+
+#\newpage
+
+#c
+#\newpage
+
+#c
+#\newpage
+#d
+
+#\newpage
+#e
+#\newpage
+#f
+#\newpage
+#g
+#\newpage
+#h
+#\newpage
+
+```
+
+
+
 \section{Resultados e discussões}
 
 \subsection{Análise descritiva dos dados}
 
 
-Para analisar o tempo de tela dos alunos de graduação do Centro de Ciências Naturais e Exatas (CCNE), acerca das diversas plataformas que têm acesso e o gerenciamento entre elas foi aplicado um questionário para os alunos dos 17 cursos de graduação do CCNE. Ao final do período da coleta dos dados, obteve-se 123 respostas do questionário, o que corresponde a, aproximadamente, 6% do público-alvo.
+
+  Para analisar o tempo de tela dos alunos de graduação do Centro de Ciências Naturais e Exatas (CCNE), acerca das diversas plataformas que têm acesso e o gerenciamento entre elas foi aplicado um questionário para os alunos dos 17 cursos de graduação do CCNE. Ao final do período da coleta dos dados, obteve-se 123 respostas do questionário, o que corresponde a, aproximadamente, 6% do público-alvo.
 
 
 
 ### Análise do Perfil do Estudante
-Nessa seção verificaremos aspectos e condições gerais da amostra de Estudantes que responderam o questionário.
+
+
+   Nessa seção verificaremos aspectos e condições gerais da amostra de Estudantes que responderam o questionário.
 
 
 Dentre os estudantes que participaram da pesquisa, aproximadamente, 46% do gênero feminino e 54% do gênero masculino. A maior porcentagem de respostas é dos estudantes do segundo, sexto e oitavo semestre com 21,1%, como pode ser visto na Tabela \@ref(tab:tab1). 
@@ -179,7 +210,7 @@ Em contrapartida, percebe-se que na Figura \@ref(fig:bar5), os estudantes tendem
 
 ### Análise da influência do Sexo
 
-Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam que utilizam mais o celular, enquanto que os homens optam pelo computador. Outras opção de resposta para essa questão, como, tablet, televisão e video game não obtiveram nenhuma resposta.
+  Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam que utilizam mais o celular, enquanto que os homens optam pelo computador. Outras opção de resposta para essa questão, como, tablet, televisão e video game não obtiveram nenhuma resposta.
 
 ```{r tab3}
 df |> 
@@ -211,7 +242,7 @@ df |>
 
 ### Análise da influência dos Dispositivos
 
-Através da Tabela \@ref(tab:tab5), verifica-se que cerca de 47% dos estudantes utilizam o celular como dispositivo para plataformas de estudos, já os outros 57% utilizam o computador. A plataforma de estudo mais utilizada entre os estudantes é o Moodle, com 58 respostas, destes 55% utilizam o Moodle no computador e 45% no celular. Entre as plataformas mais utilizadas seguem Google Meet com 17% e Ferramentas para a elaboração de trabalhos com cerca de 16%. 
+  Através da Tabela \@ref(tab:tab5), verifica-se que cerca de 47% dos estudantes utilizam o celular como dispositivo para plataformas de estudos, já os outros 57% utilizam o computador. A plataforma de estudo mais utilizada entre os estudantes é o Moodle, com 58 respostas, destes 55% utilizam o Moodle no computador e 45% no celular. Entre as plataformas mais utilizadas seguem Google Meet com 17% e Ferramentas para a elaboração de trabalhos com cerca de 16%. 
 
 ```{r tab5}
 df |> 
@@ -220,7 +251,7 @@ df |>
 
 ### Análise da influência da Ocupação
 
-Por meio da Tabela \@ref(tab:tab6), observa-se que cerca de 58% são estudantes e 42% são estudantes/empregados, para ambos destaca-se o Moodle como plataforma de estudo mais utilizada com cerca de 47% das respostas. Para os estudantes as plataformas mais utilizada após o Moodle é Ferramentas para a elaboração de trabalhos e o Google Meet, com 20% e 18%, respectivamente. Para os estudantes/empregados seguem Youtube com cerca de 19% das respostas e Google Meet com aproximadamente 15%.
+  Por meio da Tabela \@ref(tab:tab6), observa-se que cerca de 58% são estudantes e 42% são estudantes/empregados, para ambos destaca-se o Moodle como plataforma de estudo mais utilizada com cerca de 47% das respostas. Para os estudantes as plataformas mais utilizada após o Moodle é Ferramentas para a elaboração de trabalhos e o Google Meet, com 20% e 18%, respectivamente. Para os estudantes/empregados seguem Youtube com cerca de 19% das respostas e Google Meet com aproximadamente 15%.
 
 ```{r tab6}
 df |> 
@@ -237,7 +268,7 @@ df |>
 
 ### Análise da influência da Idade
 
-De acordo com a Tabela \@ref(tab:tab7) destaca-se O Instagram como rede social mais utilizada com 50% das respostas, principalmente entre a faixa etária de 20-25 anos com 73% das respostas. Entre as plataformas de redes socias seguem Twitter e Facebook, com 14% e 11%.
+  De acordo com a Tabela \@ref(tab:tab7) destaca-se O Instagram como rede social mais utilizada com 50% das respostas, principalmente entre a faixa etária de 20-25 anos com 73% das respostas. Entre as plataformas de redes socias seguem Twitter e Facebook, com 14% e 11%.
 
 ```{r tab7}
 df |> 
@@ -253,7 +284,7 @@ df |>
 
 ### AutoPercepção em relação ao tempo de tela
 
-Agora, somente, considerando os estudantes que acreditam que o seu tempo de tela aumentou durante a pandemia, é analisado o quanto o tempo de tela influenciou no rendimento, criatividade, trabalho em equipe, cumprimento de metas e concentração. Essas perguntas foram baseadas na escala de respostas Likert (de 1 até 5).
+  Agora, somente, considerando os estudantes que acreditam que o seu tempo de tela aumentou durante a pandemia, é analisado o quanto o tempo de tela influenciou no rendimento, criatividade, trabalho em equipe, cumprimento de metas e concentração. Essas perguntas foram baseadas na escala de respostas Likert (de 1 até 5).
 
 ```{r bar7, fig.cap="Gráfico de barras em relação a sensação sobre a realização de metas com o aumento do tempo de tela"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -394,12 +425,13 @@ rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você
 
 Segundo a Tabela \@ref(tab:tabc18), destaca-se a relação entre rendimento e o tempo médio dos estudantes em frente a tela na fase atual, conforme o tempo de tela aumenta, cresce também as respostas negativas, ou seja, "Ficou pior" e "Ficou muito pior".
 
-# Testes
+## Testes
 
-## Análise Fatorial
+### Análise Fatorial
+
 Nessa subseção iremos realizar a análise fatorial para diminuir a dimensionalidade das 6 questões em que foram utilizadas a Escala Likert: "Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:", "Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):","Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou nesse aspecto:", "Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:",  "Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:" e "Em relação a conteúdos, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou no aprendizado de novas ferramentas:", renomeadas para Concentração, Cumprimento de Metas, Criatividade, Trabalhos em Equipe, Rendimento e Aprendizado de novas ferramentas, respectivamente, para analisar quais os fatores que serão mais explicativos em termos da variabilidade dos dados buscando a parcimônia entre menor número de fatores (variáveis) e a maior explicação dos dados.
 
-### Testes preliminares
+#### Testes preliminares
 
 Começaremos com o teste de Bartlett para verificar correlação, sendo as hipóteses testadas são de que
 $$H_0:  \mbox{ A matriz de correlação é igual a matriz de identidade} $$ versus a hipótese alternativa $$H_1: \mbox{A matriz de correlação não é igual a matriz de identidade}$$
@@ -409,7 +441,7 @@ cor = df1 |> rename(Aprendizado = `Aprendizado de novas ferramentas`, Metas = `C
   cor()
 p1 <- psych::cortest.bartlett(cor, n = 110)$p.value
 ```
-Pelo teste de Bartlett, com índice de significância de 5% tem-se que o p-valor é `r p1`, ou seja, menor que $\alpha$ (0,05), então, há evidências para rejeitar a hipótese nula, ou seja, há evidências para rejeitar que a matriz de correlação seja igual a matriz identidade.
+Pelo teste de Bartlett, com índice de significância de 5% tem-se que o p-valor é menor que 0,001, ou seja, menor que $\alpha$ (0,05), então, há evidências para rejeitar a hipótese nula, ou seja, há evidências para rejeitar que a matriz de correlação seja igual a matriz identidade.
 
 Então podemos prosseguir com o critério de Kayser-Meyer-Olkin para testar a consistência dos dados, para testarmos o critério continuaremos utilizando a matriz de correlação:
 
@@ -441,12 +473,12 @@ ggcorrplot::ggcorrplot(cor, hc.order = TRUE,
 
 O correlograma da Figura \@ref(fig:gcor), indica que rendimento e concentração foram as opções mais correlacionadas, provavelmente por apresentarem semelhança nas respostas, o que pode indicar que os estudantes que consideraram piora na sua concentrção, também identificaram no rendimento, assim como o contrário (melhora).
 
-### Análise Fatorial com Componentes Principais
+#### Análise Fatorial com Componentes Principais
 Seguiremos a análise empregando o método dos componentes principais da análise fatorial com a matriz de correlação amostral com a amostra de 110 estudantes avaliando as 6 perguntas com notas de 1 a 5, lidando com a escala likert, no sentido de reduzir o número das 6 variáveis.
 
-Introduziremos a análise comparando a explicação da variabilidade dos dados de acordo com os Componentes Principais e com os Fatores, demonstrados na Figura \@ref(fig:cp1) e na Tabela \@ref(tab:fat1).
+Introduziremos a análise comparando a explicação da variabilidade dos dados de acordo com os Componentes Principais e com os Fatores, demonstrados na Figura \@ref(fig:gcor) e na Tabela \@ref(tab:fat1).
 
-```{r cp1}
+```{r cp1, fig.cap="Variabilidade explicada por cada Componente Principal"}
 pca <- FactoMineR::PCA(df1[,21:26], graph = F)
 
 autovalor<-factoextra::get_eig(pca)
@@ -481,7 +513,7 @@ Portanto utilizando 3 fatores, tem-se que todas as variáveis apresentam correla
 ```{r fat3}
 t4 <- as.data.frame(round(Fator$mtxresult,3))
 rownames(t4)[1:6] <- t(colnames(cor))
-mypdf1::pdf1_tbl(t4, 'Resumo da Análise')
+mypdf1::pdf1_tbl(t4 |> rename(`Var. Especificas` = `Variancias especificas`), 'Resumo da Análise')
 ```
 
 Com a Tabela \@ref(tab:fat3) conseguimos observar de maneira mais ampla a explicação dada pelos fatores, assim temos que a maior carga e as variáveis que são mais explicadas são: Aprendizado de novas ferramentas e Trabalhos em equipe, com a comunalidade em 0.940 e 0.897, respectivamente. As menores cargas (Variancias especificas maiores) e variaveis menos explicadas são: Criatividade, Cumprimento de Metas e Concentração, com comunalidade de 0.609, 0.629, 0.636, respectivamente. Verificas-se que como utilizamos a matriz de correlação, a soma da parte específica e parte comum fica 1, se fosse pala matriz de variâncias e covariâncias, a soma dessas partes daria a variância de cada variável.
@@ -489,7 +521,7 @@ Com a Tabela \@ref(tab:fat3) conseguimos observar de maneira mais ampla a explic
 Para concluir deve-se verificar a validade da análise, ou seja, temos que verificar se o limite da Soma de Quadrados dos Resíduos é maior que a Soma de Quadrados dos Resíduos, assim com a maior parte da variabilidade sendo explicada pela análise fatorial. Assim sendo, o limite é `r round(Fator$vlrsqrs,3)` e com a Soma de Quadrados do Resíduos sendo `r round(Fator$vlrsqr,3)`, podemos certificar que a soma é menor que o limite. Assim sendo, concluímos que a análise é válida.
 
 
-## Testes de Associação
+### Testes de Associação
 
 
 Para verificar se existe associação significativa estatísticamente entre duas variáveis qualitativas (com classificações) usaremos o Teste Exato de Fisher, pois algumas células das tabelas possuem poucas observações, assim temos como hipóteses:
@@ -581,13 +613,12 @@ Realizou-se o teste de Fisher com nível de significância de 5% para todas as 1
 
 **Sexo vs Qual desses dispositivos você mais utiliza ? **, obteve-se um p-valor de `r round(p1,4)` 
 
-**Idade vs Qual plataforma de rede social você tende a utilizar mais?**, obteve-se um p-valor de `r round(p4,6)`
+**Idade vs Qual plataforma de rede social você tende a utilizar mais?**, obteve-se um p-valor menor que 0.001.
 
-**Idade vs Ocupação**, obteve-se um p-valor de `r round(p5,6)`
+**Idade vs Ocupação**, obteve-se um p-valor menor que 0.001.
 
 **Sexo vs Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?**, obteve-se um p-valor de `r round(p7,4)`
 
-**Sexo vs Qual plataforma de Video Games você tende a utilizar mais?**, obteve-se um p-valor de `r round(p9,6)`
-
+**Sexo vs Qual plataforma de Video Games você tende a utilizar mais?**, obteve-se um p-valor menor que 0.001.
 
 

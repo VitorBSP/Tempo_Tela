@@ -1,18 +1,14 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {section}{\numberline {1}Introdução}{1}{section.1}%
-\contentsline {section}{\numberline {2}Intro}{1}{section.2}%
-\contentsline {section}{\numberline {3}Introdu}{1}{section.3}%
-\contentsline {section}{\numberline {4}Introduço}{1}{section.4}%
-\contentsline {section}{\numberline {5}Resultados e discussões}{2}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Análise descritiva dos dados}{2}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Análise do Perfil do Estudante}{2}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Análise da influência do Sexo}{7}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Análise da influência dos Dispositivos}{8}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Análise da influência da Ocupação}{9}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Análise da influência da Idade}{10}{subsubsection.5.1.5}%
-\contentsline {subsubsection}{\numberline {5.1.6}AutoPercepção em relação ao tempo de tela}{11}{subsubsection.5.1.6}%
-\contentsline {section}{\numberline {6}Testes}{20}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Análise Fatorial}{20}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Testes preliminares}{20}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Análise Fatorial com Componentes Principais}{22}{subsubsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.2}Testes de Associação}{25}{subsection.6.2}%
+\contentsline {section}{\numberline {1}Resultados e discussões}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Análise descritiva dos dados}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Análise do Perfil do Estudante}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Análise da influência do Sexo}{6}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Análise da influência dos Dispositivos}{7}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Análise da influência da Ocupação}{8}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Análise da influência da Idade}{9}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}AutoPercepção em relação ao tempo de tela}{10}{subsubsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.2}Testes}{19}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Análise Fatorial}{19}{subsubsection.1.2.1}%
+\contentsline {paragraph}{\numberline {1.2.1.1}Testes preliminares}{19}{paragraph.1.2.1.1}%
+\contentsline {paragraph}{\numberline {1.2.1.2}Análise Fatorial com Componentes Principais}{21}{paragraph.1.2.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.2}Testes de Associação}{24}{subsubsection.1.2.2}%
