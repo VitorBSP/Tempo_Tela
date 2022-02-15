@@ -419,7 +419,7 @@ ggcorrplot::ggcorrplot(cor, hc.order = TRUE,
 O correlograma da Figura \@ref(fig:gcor), indica que rendimento e concentração foram as opções mais correlacionadas, provavelmente por apresentarem semelhança nas respostas, o que pode indicar que os estudantes que consideraram piora na sua concentrção, também identificaram no rendimento, assim como o contrário (melhora).
 
 ### Análise Fatorial com Componentes Principais
-Seguiremos a análise empregando o método dos componentes principais da análise fatorial com a matriz de correlação amostral com a amostra de 110 consumidores avaliando as 6 perguntas com notas de 1 a 5, lidando com a escala likert, no sentido de reduzir o número das 6 variáveis.
+Seguiremos a análise empregando o método dos componentes principais da análise fatorial com a matriz de correlação amostral com a amostra de 110 estudantes avaliando as 6 perguntas com notas de 1 a 5, lidando com a escala likert, no sentido de reduzir o número das 6 variáveis.
 
 Introduziremos a análise comparando a explicação da variabilidade dos dados de acordo com os Componentes Principais e com os Fatores, demonstrados na Figura \@ref(fig:cp1) e na Tabela \@ref(tab:fat1).
 
