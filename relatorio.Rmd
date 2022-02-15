@@ -1,14 +1,15 @@
 ---
-title: "title"
+title: ""
 author:
   - Alisson Rosa Pereira^[@gmail.com]
   - Caroline Cogo Carneosso^[carolcogo808@gmail.com]
   - Renata Figueiredo Stone^[renastan@gmail.com]
   - Vitor Bernardo Silveira Pereira^[vitorpereira3115@gmail.com]
-abstract: "abstract"
 header-includes:
    - \usepackage[brazil]{babel}
    - \usepackage{bm}
+   - \usepackage{helvet}
+   - \renewcommand{\familydefault}{\sfdefault}
 geometry: left=1.7cm, right=1.7cm, top=3cm, bottom=3cm
 output:
   bookdown::pdf_document2:
@@ -23,7 +24,7 @@ indent: true
 options(digits=3)  #Arrendodamento
 options(scipen=999)
 ggplot2::theme_set(ggplot2::theme_minimal()) #Tema dos gráficos produzidos no ggplot2
-knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=4.85)
+knitr::opts_chunk$set(echo=F,message=F,warning=F,fig.pos = 'H',fig.align = 'center',fig.width=7.8, fig.height=3.8)
 scale_fill_discrete = \(...) ggplot2::scale_fill_brewer(... , palette="Set2") #Fixa a scale do fill dos gráficos do ggplot2
 #devtools::install_github('https://github.com/AlissonRP/mypdf1/tree/templates')
 
@@ -74,16 +75,27 @@ to_pt = function(df,v){
     mypdf1::pdf1_tbl_freq({{v}}) |> 
     rename(`n` =  absolute_frequency, `%` = relative_frequency)
 }
-
+tab=function(df,v1,v2){
+ df %>% 
+      group_by({{v1}},{{v2}}) %>%  
+      summarise(n=n())   %>%  
+      spread({{v2}}, n) %>% 
+      ungroup() %>% 
+      mutate_if(is.numeric , replace_na, replace = 0) 
+}
 
 ```
 
 
 \section{Introdução}
+\section{Intro}
+\section{Introdu}
+\section{Introduço}
 
-a
-
+\newpage
 \section{Resultados e discussões}
+
+\subsection{Análise descritiva dos dados}
 
 Para analisar o tempo de tela dos alunos de graduação do Centro de Ciências Naturais e Exatas (CCNE), acerca das diversas plataformas que têm acesso e o gerenciamento entre elas foi aplicado um questionário para os alunos dos 17 cursos de graduação do CCNE. Ao final do período da coleta dos dados, obteve-se 123 respostas do questionário, o que corresponde a, aproximadamente, 6% do público-alvo.
 
@@ -127,7 +139,7 @@ df |>
   mypdf1::pdf1_tbl('Proporção de utilização de aplicativos para controlar tempo')
 ```
 
-Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam utilizar mais o celular, enquanto que os homens optam pelo computador. 
+Na sequência é questionado aos estudantes quais são os dispositivos que eles mais utilizam, as respostas estão disponível na Tabela \@ref(tab:tab3). No geral a opção computador/Notebook destacou-se com 53% das respostas. A maioria das mulheres responderam utilizar mais o celular, enquanto que os homens optam pelo computador. Outras opção de resposta para essa questão, como, tablet, televisão e video game não obtiveram nenhuma resposta.
 
 ```{r tab3}
 df |> 
@@ -157,12 +169,19 @@ df |>
 
 Na Tabela \@ref(tab:tab8) percebe-se que o dispositivo computador é o mais utilizado entre os estudantes com aproximadamente 56% das respostas, para os estudantes/empregados é o celular com 52%.
 
+```{r tabc3}
+df |>  
+  mypdf1::pdf1_tbl_freq2(`Idade:`, `Ocupação:`, title = "Frequências observadas nas categorias das variáveis Idade versus Ocupação" )
+```
+
+Agora, analisando o perfil dos estudantes que participaram da pesquisa, nota-se através da Tabela \@ref(tab:tabc3) que a maioria são, somente, estudante e tem entre 20 e 25 anos. Destaca-se que entre 18-19 anos os estudantes não trabalham, enquanto que a partir dos 26 anos eles trabalham e estudam.
+
 ```{r tab8}
 df |> 
   mypdf1::pdf1_tbl_freq2(`Ocupação:`, `Qual desses dispositivos você mais utiliza ?`)
 ```
 
-Com base na Tabela \@ref(tab:tab9) e \@ref(tab:tab9) nota-se que para o **sexo feminino** antes da pandemia da Covid-19, o tempo médio diário em frente a tela para a maioria das estudantes, cerca de 48% era de 2h-4h. Já para a fase atual da pandemia, o tempo médio diário para o sexo feminino, aproximadamente 25%, passou para 8h-10h, seguidos por 6h-8h e 10h-12h ambos com 20% das estudantes.
+Com base nas Tabelas \@ref(tab:tab9) e \@ref(tab:tab10) nota-se que para o **sexo feminino** antes da pandemia da Covid-19, o tempo médio diário em frente a tela para a maioria das estudantes, cerca de 48% era de 2h-4h. Já para a fase atual da pandemia, o tempo médio diário para o sexo feminino, aproximadamente 25%, passou para 8h-10h, seguidos por 6h-8h e 10h-12h ambos com 20% das estudantes.
 
 Já para o **sexo masculino** o tempo médio diário em frente a tela, anterior a pandemia era de 4h-6h para cerca de 35% dos estudantes, o tempo médio diário atual é também de 8h-10h com 32% dos estudantes, prosseguido por 6h-8h e mais que 12h, ambos com 18% das respostas.
 
@@ -184,13 +203,6 @@ df |>
   mypdf1::pdf1_tbl_freq2(`Sexo:`, `Qual plataforma de Video Games você tende a utilizar mais ?`)
 ```
 
-  
-```{r tab12}
-df |> 
-  mypdf1::pdf1_tbl_freq2(`Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?`,
-                         `Atualmente, em média quanto tempo diário você fica em frente a tela?`)
-#carol: acho q n precisa dessa tabela
-```
 
 ```{r bar2, fig.cap="Gráfico de barras em relação aos dias da semana que mais se utiliza o dispositivo"}
 df |> 
@@ -198,9 +210,9 @@ df |>
   theme(legend.position = 'none')
 ```
 
-Referente a Figura \@ref(fig:bar2), pode-se concluir que não há uma diferença significativa entre os dias uteis da semana (segunda, terça, quarta, quinta, sexta) que mais se utiliza o dispositivo, todos os dias estão com cerca de 16%. Entretanto, é possível notar essa diferença em relação ao fim de semana, sábado e domingo, com cerca de 11% e 10%, respectivamente. Ambos com uma percentagem relativamente menor quando comparado aos dias uteis.
+Referente a Figura \@ref(fig:bar2), pode-se concluir que não há uma diferença sugestiva entre os dias uteis da semana (segunda, terça, quarta, quinta, sexta) que mais se utiliza o dispositivo, todos os dias estão com cerca de 16%. Entretanto, é possível notar essa diferença em relação ao fim de semana, sábado e domingo, com cerca de 11% e 10%, respectivamente. Ambos com uma percentagem relativamente menor quando comparado aos dias uteis.
 
-```{r bar3}
+```{r bar3, fig.cap="Gráfico de barras relativo aos dias da semana que mais se utiliza plataformas de redes sociais"}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de redes sociais:`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de redes sociais:`)+ 
   theme(legend.position = 'none')
@@ -208,7 +220,7 @@ df |>
 
 Em relação à utilização de plataformas de redes sociais, na Figura \@ref(fig:bar3), certifica-se que no fim de semana os estudantes tendem a passar mais tempo, cerca de 22% das respostas no domingo e 21% no sábado. Seguidos de sexta-feira que possui cerca de 15% das respostas.
 
-```{r bar4}
+```{r bar4, fig.cap="Gráfico de barras referente aos dias da semana e a utilização de plataformas de streaming"}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de streaming :`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de streaming :`)+ 
   theme(legend.position = 'none')
@@ -216,22 +228,15 @@ df |>
 
 Em relação a Figura \@ref(fig:bar4), observa-se novamente que os estudantes tendem a utilizar plataformas de streaming durante o fim de semana, domingo com cerca de 24% das respostas e sábado com 23%, seguidos por sexta-feira com 15%.
 
-```{r bar5}
+```{r bar5, fig.cap="Gráfico de barrras relativo aos dias da semana e a utilização de plataformas de estudo"}
 df |> 
   separate_rows(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de estudo :`, sep = ', ') |>   bar_plot(`Qual(is) dia(s) da semana você tende a passar mais tempo em plataformas de estudo :`)+ 
   theme(legend.position = 'none')
 ```
 
-Em contrapartida, percebe-se que na Figura \@ref(fig:bar5), os estudantes tendem a passar mais tempo em plataformas de estudo, em dias uteis da semana, quarta-feira com 19% das respostas, seguido pelos outros dias, o final de semana fica com as menores percentagens, ou seja as plataformas de estudo são menos utilizadas durantes esses dias.
+Em contrapartida, percebe-se que na Figura \@ref(fig:bar5), os estudantes tendem a passar mais tempo em plataformas de estudo, em dias uteis da semana, quarta-feira com 19% das respostas, seguido pelos outros dias, o final de semana fica com as menores percentagens, ou seja as plataformas de estudo são menos utilizadas durante esses dias.
 
-
-```{r tab13}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
- to_pt(`Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):`) |> 
-  mypdf1::pdf1_tbl('Sensação sobre a realização de metas com o aumento do tempo de tela')
-```
-
-Tabela \@ref(tab:tab13)
+Agora, somente, considerando os estudantes que acreditam que o seu tempo de tela aumentou durante a pandemia, é analisado o quanto o tempo de tela influenciou no rendimento, criatividade, trabalho em equipe, cumprimento de metas e concentração. Essas perguntas foram baseadas na escala de respostas Likert (de 1 até 5).
 
 ```{r bar7, fig.cap="Gráfico de barras em relação a sensação sobre a realização de metas com o aumento do tempo de tela"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -239,16 +244,7 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
   theme(legend.position = 'none')
 ```
 
-Para a \@ref(fig:bar7) leva-se como legenda  **1 = Cumpri muito menos metas**, 2 = Cumpri Menos metas, **3 = Indiferente**, 4 = Cumpri mais metas, **5 = Cumpri muito mais metas**.Logo, percebe-se que em relação a metas e aumento do tempo de telas, 33% dos estudantes é indiferente.
-
-
-```{r tab14}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
- to_pt(`Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou nesse aspecto:`) |> 
-  mypdf1::pdf1_tbl('Impressão sobre a criatividade com o aumento do tempo de tela')
-```
-
-Tabela \@ref(tab:tab14)
+Para a Figura \@ref(fig:bar7) leva-se como legenda  **1 = Cumpri muito menos metas**, 2 = Cumpri Menos metas, **3 = Indiferente**, 4 = Cumpri mais metas, **5 = Cumpri muito mais metas**. Logo, percebe-se que em relação a metas e aumento do tempo de telas, 33% dos estudantes é indiferente.
 
 ```{r bar8, fig.cap="Gráfico de barras em relação a impressão sobre a criatividade com o aumento do tempo de tela"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -257,13 +253,6 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
 ```
 
 Na Figura \@ref(fig:bar8) leva-se como legenda  **1 = Muito menos criativo**, 2 = Menos criativo, **3 = Indiferente**, 4 =  Mais criativo, **5 = Muito mais criativo**. Assim, pode-se visualizar que cerca de 40% dos estudantes é indiferente em relação ao aumento de tempo de tela com enfoque na criatividade.
-
-```{r tab15}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
- to_pt(`Em relação a conteúdos, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou no aprendizado de novas ferramentas:`) |> 
-  mypdf1::pdf1_tbl('Impressão sobre o aprendizado de ferramentas novas com o aumento do tempo de tela')
-```
-
 
 Para as Figuras \@ref(fig:bar9), \@ref(fig:bar12), \@ref(fig:bar13), \@ref(fig:bar14), Considera-se como legenda  **1 = Muito pior**, 2 = Pior, **3 = Indiferente**, 4 = Melhor, **5 = Muito melhor**.
 
@@ -275,32 +264,14 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
 
 De acordo com a Figura \@ref(fig:bar9), ao serem questionado sobre a relação entre o aumento do tempo de tela com o aprendizado de novas ferramentas, cerca de 36% dos estudantes responderam que houve melhora.
 
-
-```{r tab18}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
- to_pt(`Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:`) |> 
-  mypdf1::pdf1_tbl('Sensação sobre a influencia do aumento de tempo de tela na cooperação em trabalhos em equipe')
-```
-
-Tabela \@ref(tab:tab18)
-
 ```{r bar12, fig.cap="Gráfico de barras em relação a sensação sobre a influencia do aumento de tempo de tela na cooperação em trabalhos em equipe"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
   bar_plot(`Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:`)+
   theme(legend.position = 'none')
 ```
 
-Na Figura \@ref(fig:bar12), nota-se que não ha diferenças significativas entre as alternativas: **Pior, Indiferente, e Melhor**, com 27%, 29% e 23% das respostas, respectivamente, esses porcentagens dizem respeito quando questionado  a influencia do tempo de tela em relação a cooperação dos estudantes no trabalhos em equipe. 
+Na Figura \@ref(fig:bar12), nota-se que não há diferenças expressivas entre as alternativas: **Pior, Indiferente, e Melhor**, com 27%, 29% e 23% das respostas, respectivamente, esses porcentagens dizem respeito quando questionado  a influencia do tempo de tela em relação a cooperação dos estudantes no trabalhos em equipe. 
 
-
-```{r tab19}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-  drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:`) |>
- to_pt(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:`) |> 
-  mypdf1::pdf1_tbl('Noção sobre a influencia do aumento de tempo de tela no rendimento pessoal')
-```
-
-Tabela \@ref(tab:tab19)
 
 ```{r bar13, fig.cap="Gráfico de barras em relação a noção sobre a influencia do aumento de tempo de tela no rendimento pessoal"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |> 
@@ -311,15 +282,6 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
 
 Conforme a Figura \@ref(fig:bar13), verifica-se que acerca do tempo de tela e a influência no rendimento dos estudantes, aproximadamente 42% das respostas foram que houve uma piora.
 
-```{r tab20}
-df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-  drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`) |>
- to_pt(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`) |> 
-  mypdf1::pdf1_tbl('Impressão sobre a influencia do aumento de tempo de tela em práticas que trazem benefícios')
-```
-
-Tabela \@ref(tab:tab20)
-
 ```{r bar14, fig.cap="Gráfico de barras em relação a impressão obre a influencia do aumento de tempo de tela em práticas que trazem benefícios"}
 df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |> 
   drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`) |>
@@ -329,41 +291,6 @@ df |> filter(!`De modo geral você acredita que seu tempo de tela aumentou duran
 
 Com a Figura \@ref(fig:bar14), observa-se que cerca de 36% dos estudantes relatam como **Muito pior**, seguidos da opção **Pior** com 26% das respostas, em relação o aumento do tempo de tela e a concentração dos estudantes.
 
-
-```{r tabc1}
-df |>  
-  mypdf1::pdf1_tbl_freq2(`Sexo:`,
-                         `Ocupação:`, title = "Frequências observadas nas categorias das variáveis Sexo versus Ocupação" )
-```
-
-Tabela \@ref(tab:tabc1)
-
-```{r tabc2}
-df |>  rename(`Video Games` = `Qual plataforma de Video Games você tende a utilizar mais ?`) |>
-  mypdf1::pdf1_tbl_freq2(`Video Games`, `Ocupação:`, title = "Frequências observadas nas categorias das variáveis Video Game versus Ocupação" )
-```
-
-Tabela \@ref(tab:tabc2)
-
-
-```{r tabc3}
-df |>  
-  mypdf1::pdf1_tbl_freq2(`Idade:`, `Ocupação:`, title = "Frequências observadas nas categorias das variáveis Idade versus Ocupação" )
-```
-
-Tabela \@ref(tab:tabc3)
-
-```{r tabc4}
-df |>  rename(`Rede Social` = `Qual plataforma de rede social você tende a utilizar mais?`) |>
-  mypdf1::pdf1_tbl_freq2(`Rede Social`, `Idade:`, title = "Frequências observadas nas categorias das variáveis Rede Social versus Idade" )
-
-df |>  rename(`Rede Social` = `Qual plataforma de rede social você tende a utilizar mais?`) |>
-  mypdf1::pdf1_tbl_freq2(`Rede Social`, `Idade:`, marg = T, title = "Frequências percentuais nas categorias das variáveis Rede Social versus Idade")
-```
-
-Tabela \@ref(tab:tabc4)
-
-
 ```{r tabc5}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
 rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você fica em frente a tela?`, 
@@ -372,46 +299,25 @@ rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você
 
 ```
 
-Tabela \@ref(tab:tabc5)
+Através da Tabela \@ref(tab:tabc5) pode-se perceber que com o aumento do tempo de tela na fase atual da pandemia, destaca-se respostas negativas, ou seja, "Cumpri muito menos metas". No entanto, tem-se o tempo de tela atual de 8h-10h com 12 respostas positivas, "Cumpri mais metas".
 
 ```{r tabc6}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
 rename(`Cumprimento de Metas` = `Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):` ) |>
   mypdf1::pdf1_tbl_freq2(`Ocupação:`, `Cumprimento de Metas`,  title = "Frequências observadas nas categorias das variáveis Ocupação versus Metas" )
-
 ```
 
-Tabela \@ref(tab:tabc6)
-
-
-```{r tabc7}
-df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-rename(`Plataforma de Estudo` = `Qual plataforma de estudo você tende a utilizar mais?`,
-       `Cumprimento de Metas` = `Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):` ) |>
-  mypdf1::pdf1_tbl_freq2(`Plataforma de Estudo`, `Cumprimento de Metas`, title = "Frequências observadas nas categorias das variáveis Plataforma de Estudo versus Metas" )
-
-```
-
-Tabela \@ref(tab:tabc7)
+Segundo a Tabela \@ref(tab:tabc6), verifica-se que para o cumprimento de metas, avaliou-se como "Cumpri mais metas "para os estudantes/empregados, com 19 respostas, entre o estudantes a intensidade que se sobressai é a opção "Indiferente" com 22 respostas, prosseguido por "Cumpri muito menos metas" e "Cumpri mais metas", ambas com 13 respostas.
 
 ```{r tabc8}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
 rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você fica em frente a tela?`, 
               `Criatividade` = `Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou nesse aspecto:` ) |>
   mypdf1::pdf1_tbl_freq2(`Tempo de Tela Atual`, `Criatividade`, title = "Frequências observadas nas categorias das variáveis Tempo de Tela versus Criatividade" )
-
 ```
 
-Tabela \@ref(tab:tabc8)
+Em relação a Tabela \@ref(tab:tabc8), observa-se que para o tempos médio diário na atual fase da pandemia relativo a criatividade, destaca-se a intensidade "Indiferente" com 44 respostas, cerca de 40% das respostas.
 
-```{r tabc9}
-df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-rename(`Criatividade` = `Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou nesse aspecto:` ) |>
-  mypdf1::pdf1_tbl_freq2(`Sexo:`, `Criatividade`, title = "Frequências observadas nas categorias das variáveis Sexo versus Criatividade" )
-
-```
-
-Tabela \@ref(tab:tabc9)
 
 ```{r tabc10}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -421,16 +327,7 @@ rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você
 
 ```
 
-Tabela \@ref(tab:tabc10)
-
-```{r tabc11}
-df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-rename(`Plataforma de Estudo` = `Qual plataforma de estudo você tende a utilizar mais?`, 
-              `Aprendizado de novas ferramentas` = `Em relação a conteúdos, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou no aprendizado de novas ferramentas:` ) |>
-  mypdf1::pdf1_tbl_freq2(`Plataforma de Estudo`, `Aprendizado de novas ferramentas`, title = "Frequências observadas nas categorias das variáveis plataforma de estudo versus Aprendizado de novas ferramentas")
-```
-
-Tabela \@ref(tab:tabc11)
+Analisa-se na Tabela \@ref(tab:tabc10), que para a relação entre tempo médio diário na atual fase da pandemia e o aprendizado de novas ferramentas, evidencia-se a intensidade "Ficou melhor" no tempo médio diário de 8h-10h.
 
 ```{r tabc12}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -441,28 +338,7 @@ rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você
 
 ```
 
-Tabela \@ref(tab:tabc12)
-
-```{r tabc13}
-df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-  drop_na(`Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:`) |>
-rename(`Trabalhos em equipe` = `Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:` ) |>
-  mypdf1::pdf1_tbl_freq2(`Sexo:`, `Trabalhos em equipe`, title = "Frequências observadas nas categorias das variáveis Sexo versus Trabalho em equipe" )
-
-```
-
-Tabela \@ref(tab:tabc13)
-
-```{r tabc14}
-df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-    drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`) |>
-rename(`Plataforma de Estudo` = `Qual plataforma de estudo você tende a utilizar mais?`,
-       `Concentração` = `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:` ) |>
-  mypdf1::pdf1_tbl_freq2(`Plataforma de Estudo`, `Concentração`, title = "Frequências observadas nas categorias das variáveis Plataforma de estudo versus Concentração" )
-
-```
-
-Tabela \@ref(tab:tabc14)
+Na  Tabela \@ref(tab:tabc12), nota-se que para a relação entre a média de tempo de tela diário na atual fase da pandemia e a cooperação do estudante em trabalhos em equipe, destaca-se  a opção "Indiferente" no tempo 8h-10h, com 13 respostas.
 
 ```{r tabc15}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
@@ -473,51 +349,209 @@ rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você
 
 ```
 
-Tabela \@ref(tab:tabc15)
+COnforme a Tabela \@ref(tab:tabc15), identifica-se que conforme o tempo de tela aumenta, cresce também as respostas negativas, ou seja, ""Ficou muito pior", isto em relação a concentração dos estudantes participantes.
 
-```{r tabc16}
+
+```{r tabc17}
 df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
-  drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`) |>
-rename(`Concentração` = `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:` ) |>
-  mypdf1::pdf1_tbl_freq2(`Sexo:`,`Concentração`, title = "Frequências observadas nas categorias das variáveis Sexo versus Concentração" )
+rename(`Plataforma de Estudo` = `Qual plataforma de estudo você tende a utilizar mais?`,
+        `Rendimento` = `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:` ) |>
+  mypdf1::pdf1_tbl_freq2(`Plataforma de Estudo`, `Rendimento`, title = "Frequências observadas nas categorias das variáveis Plataforma de estudo versus Rendimento" )
 
 ```
 
-Tabela \@ref(tab:tabc16)
+Agora na Tabela \@ref(tab:tabc17) salienta-se a plataforma de estudo Moodle com o maior número de respostas na intensidade "Ficou pior" com 19 respostas, isso em relação ao rendimento dos estudantes participantes, seguido da opção "Ficou muito pior" com 13 respostas,  para a mesma plataforma.
 
+```{r tabc18}
+df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
+rename(`Tempo de Tela Atual` = `Atualmente, em média quanto tempo diário você fica em frente a tela?`, 
+           `Rendimento` = `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:`) |>
+  mypdf1::pdf1_tbl_freq2(`Tempo de Tela Atual`, `Rendimento`, title = "Frequências observadas nas categorias das variáveis Tempo de Tela versus Rendimento"  )
+```
+
+Segundo a Tabela \@ref(tab:tabc18), destaca-se a relação entre rendimento e o tempo médio dos estudantes em frente a tela na fase atual, conforme o tempo de tela aumenta, cresce também as respostas negativas, ou seja, "Ficou pior" e "Ficou muito pior".
 
 # Testes
-Usaremos o teste de Bartlett para verificar correlação, sendo as hipóteses testadas são de que
+
+## Análise Fatorial
+Nessa subseção iremos realizar a análise fatorial para diminuir a dimensionalidade das 6 questões em que foram utilizadas a Escala Likert: "Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:", "Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):","Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou nesse aspecto:", "Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:",  "Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:" e "Em relação a conteúdos, o quanto você acha que a pandemia e o aumento de tempo de tela influenciou no aprendizado de novas ferramentas:", renomeadas para Concentração, Cumprimento de Metas, Criatividade, Trabalhos em Equipe, Rendimento e Aprendizado de novas ferramentas, respectivamente, para analisar quais os fatores que serão mais explicativos em termos da variabilidade dos dados buscando a parcimônia entre menor número de fatores (variáveis) e a maior explicação dos dados.
+
+### Testes preliminares
+
+Começaremos com o teste de Bartlett para verificar correlação, sendo as hipóteses testadas são de que
 $$H_0:  \mbox{ A matriz de correlação é igual a matriz de identidade} $$ versus a hipótese alternativa $$H_1: \mbox{A matriz de correlação não é igual a matriz de identidade}$$
 
 ```{r}
-cor = cor(df1[,21:26])
+cor = df1 |> rename(Aprendizado = `Aprendizado de novas ferramentas`, Metas = `Cumprimento de Metas`) %>% .[,21:26] %>%
+  cor()
 p1 <- psych::cortest.bartlett(cor, n = 110)$p.value
 ```
-Pelo teste de Bartlett, com índice de significância de 5% tem-se que o p-valor é `r p1` é menor que 0.05, ou seja, rejeitamos a hipótese nula, assim há evidência para rejeitar que a matriz de correlação não seja igual a matriz identidade.
+Pelo teste de Bartlett, com índice de significância de 5% tem-se que o p-valor é `r p1`, ou seja, menor que $\alpha$ (0,05), então, há evidências para rejeitar a hipótese nula, ou seja, há evidências para rejeitar que a matriz de correlação seja igual a matriz identidade.
 
-Então podemos prosseguir com o critério de Kayser-Meyer-Olkin para testar a consistência dos dados, para testarmos o critério iremos utilizar a matriz de correlação:
+Então podemos prosseguir com o critério de Kayser-Meyer-Olkin para testar a consistência dos dados, para testarmos o critério continuaremos utilizando a matriz de correlação:
 
-```{r}
-
+```{r cor}
 as.data.frame(round(cor,3)) |>
   mypdf1::pdf1_tbl(title="Matriz de Correlação")
-kmo <- psych::KMO(cor)$MSA
-FactoMineR::PCA(df1[,21:26]) %>%
-factoextra::fviz_pca_biplot(habillage = as.factor(df1$`Qual plataforma de streaming você tende a utilizar mais ?`), label="var", title = "PCA - Questionário") + scale_color_brewer(palette="Set2") +
-     theme_minimal()
 ```
-Pelo critério de Kayser-Meyer-Olkin, temos que o critério tem valor de `r kmo`, que é maior que 0.5, então podemos concluir que o modelo de análise fatorial está adequadamente ajustado aos dados, pois existe consistência geral nos dados, ainda podemos dizer o critério possui valores bons ((Hutcheson e Sofroniou (1999)).
+Visto que o teste de Bartlett rejeitou a hipótese que a matriz seria a igual a matriz identidade, então a Tabela \@ref(tab:cor) apresenta os valores das correlações entre as variáveis (ou perguntas), analisaremos as correlações na Figura \@ref(fig:gcor).
 
 ```{r}
+kmo <- psych::KMO(cor)$MSA
+cronbach <- psych::alpha(df1[,21:26])$total$raw_alpha
+```
+Pelo critério de Kayser-Meyer-Olkin, temos que o critério possui o valor de `r kmo`, que é maior que 0.5, então podemos concluir que o modelo de análise fatorial estará adequadamente ajustado aos dados, dado que  existe consistência geral nos dados, ainda podemos dizer o critério possui bons valores de acordo com Hutcheson e Sofroniou (1999). 
+
+Do mesmo modo podemos utilizar o Alfa de Cronbach para estimar a confiabilidade e a consistência interna de um teste, questionário ou escala de uma pesquisa, pois mede a  correlação entre respostas em um questionário, assim obtivemos um Alfa de Cronbach de `r cronbach` o que o caracteriza como aceitável de acordo com George e Mallery (2003). Assim na Figura \@ref(fig:gcor), podemos analisar como as questões se relacionam.
+
+```{r gcor, fig.cap="Correlograma das questões com escala Likert"}
 ggcorrplot::ggcorrplot(cor, hc.order = TRUE, 
            type = "lower", 
            lab = TRUE, 
            lab_size = 3, 
            method="circle", 
            colors = c("tomato2", "white", "springgreen3"), 
-           title="Correlograma - base de dados exemplo 1", 
+           title="Correlograma das questões com escala Likert", 
            ggtheme=theme_bw)
-cronbach <- psych::alpha(df1[,21:26])$total$raw_alpha
+
 ```
+
+O correlograma da Figura \@ref(fig:gcor), indica que rendimento e concentração foram as opções mais correlacionadas, provavelmente por apresentarem semelhança nas respostas, o que pode indicar que os estudantes que consideraram piora na sua concentrção, também identificaram no rendimento, assim como o contrário (melhora).
+
+### Análise Fatorial com Componentes Principais
+Seguiremos a análise empregando o método dos componentes principais da análise fatorial com a matriz de correlação amostral com a amostra de 110 consumidores avaliando as 6 perguntas com notas de 1 a 5, lidando com a escala likert, no sentido de reduzir o número das 6 variáveis.
+
+Introduziremos a análise comparando a explicação da variabilidade dos dados de acordo com os Componentes Principais e com os Fatores, demonstrados na Figura \@ref(fig:cp1) e na Tabela \@ref(tab:fat1).
+
+```{r cp1}
+pca <- FactoMineR::PCA(df1[,21:26], graph = F)
+
+autovalor<-factoextra::get_eig(pca)
+factoextra::fviz_eig(pca, addlabels = T, ylim=c(0,90))
+
+
+```
+
+Conforme a Figura \@ref(fig:cp1) tem-se que a explicação da variabilidade dos dados pelos Componentes Principais são: 43%, 17%, 13.7%, 9.8%, 8.9% e 7.6%, com os autovalores sendo `r autovalor[1,1]`, `r autovalor[2,1]`,`r autovalor[3,1]`, `r autovalor[4,1]`,`r autovalor[5,1]`, `r autovalor[6,1]`, assim percebemos que os dois primeiros componentes principais tem 60% de ilustração das variabilidades dos dados e autovalores maiores que 1, adicionando o componente principal 3, fica-se com 73,7% de explicação dos dados e ainda contém um autovalor próximo de 1. Assim, agora iremos verificar na Tabela \@ref(tab:fat1), a explicação da variação dos dados dada pelos Fatores.
+
+
+```{r fat1}
+Fator <- df1[,21:26] %>% 
+  MVar.pt::FA(method = "PC",  nfactor = 3)
+Var <- round(Fator$mtxvar,3)[1:3,] %>%
+  as.data.frame()
+mypdf1::pdf1_tbl(Var, 'Autovalores e explicação da variabilidade')
+```
+Em concordância com a Figura \@ref(fig:cp1), observa-se que a Tabela \@ref(tab:fat1) possui valores extremamente semelhantes, assim iremos utilizar 3 Fatores, para obter uma explicação variância maior que 70%. Na Tabela \@ref(tab:fat2) iremos encontrar a carga fatorial dada por cada fator com a variável.
+
+
+```{r fat2}
+Carga <- as.data.frame(round(Fator$mtxcarga,3))
+rownames(Carga) <- t(colnames(cor))
+mypdf1::pdf1_tbl(Carga, 'Matriz das Cargas Fatoriais')
+```
+Nota-se com a Tabela \@ref(tab:fat2) que a maioria das correlações entre os Fatores e as variáveis são negativas, ou seja, explicando-as inversamente. Então o Fator 1 está associado inversamente com as variáveis: Cumprimento de Metas, Criatividade, Rendimento e Concentração, sendo essas as variáveis que mais se correlacionam de acordo a Figura \@ref(fig:gcor), já o Fator 2 está mais relacionado com Trabalhos em equipe e o Fator 3 com Aprendizado de novas ferramenteas, nota-se pela Figura \@ref(fig:gcor) que as duas variáveis não possuem coeficiente de correlação acima de 0.31 com nenhuma variável. 
+
+Portanto utilizando 3 fatores, tem-se que todas as variáveis apresentam correlações em módulo de pelo menos 0.7, com os fatores. Na Tabela \@ref(tab:fat3) encontraremos um resumo de toda análise verificando o variância que é explicada pelos fatores (comunalidade) e as variância que não é (Variancias especificas).
+
+
+```{r fat3}
+t4 <- as.data.frame(round(Fator$mtxresult,3))
+rownames(t4)[1:6] <- t(colnames(cor))
+mypdf1::pdf1_tbl(t4, 'Resumo da Análise')
+```
+
+Com a Tabela \@ref(tab:fat3) conseguimos observar de maneira mais ampla a explicação dada pelos fatores, assim temos que a maior carga e as variáveis que são mais explicadas são: Aprendizado de novas ferramentas e Trabalhos em equipe, com a comunalidade em 0.940 e 0.897, respectivamente. As menores cargas (Variancias especificas maiores) e variaveis menos explicadas são: Criatividade, Cumprimento de Metas e Concentração, com comunalidade de 0.609, 0.629, 0.636, respectivamente. Verificas-se que como utilizamos a matriz de correlação, a soma da parte específica e parte comum fica 1, se fosse pala matriz de variâncias e covariâncias, a soma dessas partes daria a variância de cada variável.
+
+Para concluir deve-se verificar a validade da análise, ou seja, temos que verificar se o limite da Soma de Quadrados dos Resíduos é maior que a Soma de Quadrados dos Resíduos, assim com a maior parte da variabilidade sendo explicada pela análise fatorial. Assim sendo, o limite é `r round(Fator$vlrsqrs,3)` e com a Soma de Quadrados do Resíduos sendo `r round(Fator$vlrsqr,3)`, podemos certificar que a soma é menor que o limite. Assim sendo, concluímos que a análise é válida.
+
+
+## Testes de Associação
+
+Para verificar se existe associação significativa estatísticamente entre duas variáveis qualitativas (com classificações) usaremos o Teste Exato de Fisher, pois algumas células das tabelas possuem poucas observações, assim temos como hipóteses:
+$$H_0:\text{Não existe associação entre as variáveis de classificação.}$$
+$$H_1:\text{Existe associação entre as variáveis de classificação.}$$
+
+```{r}
+p1 =tab(df,`Sexo:`, `Qual desses dispositivos você mais utiliza ?`)[2:(length(unique(df$`Qual desses dispositivos você mais utiliza ?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+p2 =tab(df,`Qual plataforma de estudo você tende a utilizar mais?`,`Qual desses dispositivos você mais utiliza ?`)[2:(length(unique(df$`Qual desses dispositivos você mais utiliza ?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+p3 =tab(df,`Qual plataforma de estudo você tende a utilizar mais?`,`Ocupação:`)[2:(length(unique(df$`Ocupação:`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+#p4 = tab(df,`Idade:`, `Qual plataforma de rede social você tende a utilizar mais?`)[2:(length(unique(df$`Qual plataforma de rede social #você tende a utilizar mais?`)) +1)] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value)
+p4 = 0.0003408
+p5 =tab(df,`Idade:`, `Ocupação:`)[2:(length(unique(df$`Ocupação:`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+p6 =tab(df,`Ocupação:`, `Qual desses dispositivos você mais utiliza ?`)[2:(length(unique(df$`Qual desses dispositivos você mais utiliza ?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+p7 =tab(df,`Sexo:`, `Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?`)[2:(length(unique(df$`Antes da pandemia da Covid-19, em média quanto tempo diário você ficava em frente a tela?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+
+p8 = tab(df,`Sexo:`,  `Atualmente, em média quanto tempo diário você fica em frente a tela?`)[2:(length(unique(df$ `Atualmente, em média quanto tempo diário você fica em frente a tela?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+
+p9 = tab(df,`Sexo:`,  `Qual plataforma de Video Games você tende a utilizar mais ?`)[2:(length(unique(df$ `Qual plataforma de Video Games você tende a utilizar mais ?`)) +1)] |> 
+  fisher.test() |> 
+  with(p.value)
+
+#p10 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"),`Atualmente, em #média quanto tempo diário você fica em frente a tela?`,`Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma #diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value)
+p10 = 0.5608035
+p11 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"),`Ocupação:`,`Em relação a metas, tanto profissionais quanto pessoais, você sentiu alguma diferença com relação ao aumento do uso das plataformas digitais (ou aumento do tempo de tela):` )[2:6] |> 
+  fisher.test() |> 
+  with(p.value)
+#p12 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"), `Atualmente, em #média quanto tempo diário você fica em frente a tela?`, `Em relação à criatividade, o quanto você acha que a pandemia e o aumento de tempo #de tela influenciou nesse aspecto:` )[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value) 
+p12 = 0.2946903
+
+#p13 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"),`Atualmente, em #média quanto tempo diário você fica em frente a tela?`,  `Em relação a conteúdos, o quanto você acha que a pandemia e o aumento de tempo #de tela influenciou no aprendizado de novas ferramentas:`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value)
+
+p13 = 0.6308564
+  
+#p14 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
+#  drop_na(`Agora em relação ao tempo de tela, o quanto você acha que a pandemia influenciou  na sua cooperação nos trabalhos em equipes:`),
+#  `Atualmente, em média quanto tempo diário você fica em frente a tela?`,  `Agora em relação ao tempo de tela, o quanto você acha que a #pandemia influenciou  na sua cooperação nos trabalhos em equipes:`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value)
+p14 = 0.4959013
+
+#p15 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não") |>
+#  drop_na(`Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente #trazem benefícios:`), `Atualmente, em média quanto tempo diário você fica em frente a tela?`, `Em relação ao tempo de tela, o quanto você #acha que a pandemia influenciou na concentração, atenção aos trabalhos que realmente trazem benefícios:`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value)  
+p15 = 0.8181132
+
+#p16 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"), 
+#          `Qual plataforma de estudo você tende a utilizar mais?`, 
+#          `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value) 
+
+p16 = 0.9027673
+
+#p17 = tab(df |>  filter(!`De modo geral você acredita que seu tempo de tela aumentou durante a pandemia?...28` == "Não"), 
+#          `Atualmente, em média quanto tempo diário você fica em frente a tela?`, 
+#          `Em relação ao tempo de tela, o quanto você acha que a pandemia influenciou no seu rendimento:`)[2:6] |> 
+#  fisher.test(simulate.p.value=TRUE,B=1e7) |> 
+#  with(p.value) 
+
+p17 = 0.7792614
+```
+
+Utilizando o teste de Fisher com nível de significância de 5%, obteve-se um p-valor de `r round(p1,2)`, logo há evidências para rejeitar a hipótese de não associação entre variavel 1 e variavel 2. 
+
 
